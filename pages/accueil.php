@@ -9,7 +9,7 @@
                         <div class="slider-text-inner">
                             <h1>Un savoir faire inimitable</h1>
                                 <h2>Le meilleur de la manufacture automobile italienne</h2>
-                                <p><a class="btn btn-primary btn-demo" href="#">En savoir plus</a> <a class="btn btn-primary btn-learn" href="">Nos modèles</a></p>
+                                <p><a class="btn btn-primary btn-demo" href="index.php?page=marque.php">En savoir plus</a> <a class="btn btn-primary btn-learn" href="index.php?page=modeles.php">Nos modèles</a></p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                 </span>
                 <div class="desc">
                     <h3>Qualité</h3>
-                    <p>Tous nos modèles passent par un contrôle qualité des plus strictes pour vous garantir une voiture sans défaut</p>
+                    <p>Tous nos modèles passent par un contrôle qualité des plus strictes pour vous garantir une voiture sans défaut faite pour durer</p>
                 </div>
             </div>
         </div>

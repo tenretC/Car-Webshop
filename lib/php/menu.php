@@ -8,16 +8,27 @@
 			<li class="active"><a href="index.php?page=accueil.php">Accueil</a></li>
 			<li><a href="index.php?page=marque.php">La marque</a></li>
 			<li class="has-dropdown">
-				<a href="#">Modèles</a>
+				<a href="index.php?page=modeles.php">Modèles</a>
 				<ul class="dropdown">
-					<li><a href="#">Ghibli</a></li>
-					<li><a href="#">Levante</a></li>
+                <?php
+
+                //on récupère toutes les voitures
+                    $voiture = new VoitureDB($cnx);
+                    $liste = $voiture->getAllVoiture();
+                    $nbrVoitures = count($liste);
+                    for($i=0;$i<$nbrVoitures;$i++){
+                ?>
+					<li><a href="index.php?page=<?php print $liste[$i]['modele'];?>.php"><?php print utf8_decode($liste[$i]['modele']);?></a></li>
+					<!--<li><a href="#">Levante</a></li>
 					<li><a href="#">Quattroporte</a></li>
 					<li><a href="#">GranTurismo</a></li>
-					<li><a href="#">GranCabrio</a></li>
+					<li><a href="#">GranCabrio</a></li>-->
+                <?php
+                    }
+                ?>
 				</ul>
 			</li>
-			<li><a href="index.php?page=contacts.php">Contact</a></li>
+			<li><a href="index.php?page=contacts.php">Contacts</a></li>
 			<!--<li><a href="connexion.html">Se connecter</a></li>-->
 		</ul>
 	</div>

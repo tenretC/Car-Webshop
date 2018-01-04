@@ -8,8 +8,8 @@
 		<ul class="fh5co-footer-links">
 			<li><a href="index.php?page=accueil.php">Accueil</a></li>
 			<li><a href="index.php?page=marque.php">La marque</a></li>
-			<li><a href="#">Nos modèles</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="index.php?page=modeles.php">Nos modèles</a></li>
+			<li><a href="index.php?page=contacts.php">Contacts</a></li>
 		</ul>
 	</div>
 	<div class="col-md-3 col-md-push-3">
