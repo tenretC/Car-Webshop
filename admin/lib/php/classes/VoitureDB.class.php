@@ -8,7 +8,7 @@ class VoitureDB {
         $this->_db = $_db;
     }
 
-//liste des voitures correspondant au choix du type dans liste déroulante
+//liste des voitures correspondant à l'id sélectionné
     function getVoiture($id) {
         try {
             $query = "SELECT * FROM voiture where id_voiture=:id_voiture";

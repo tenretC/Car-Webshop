@@ -16,7 +16,7 @@
 ?>
     <div class="row">
         <div class="col-md-6 text-center animate-box">
-            <a href="#" class="work"  style="background-image: url(images/<?php print $liste[$i]['image']; ?>);">
+            <a href="index.php?page=details_modele.php&id=<?php print $liste[$i]['id_voiture']; ?>" class="work"  style="background-image: url(images/<?php print $liste[$i]['image']; ?>);">
                 <div class="desc">
                     <h3><?php
                         print utf8_decode($liste[$i]['modele']);
@@ -30,7 +30,7 @@
             </a>
         </div>
         <div class="col-md-6 text-center animate-box">
-            <a href="#" class="work"  style="background-image: url(images/<?php $i++; print $liste[$i]['image']; ?>);">
+            <a href="index.php?page=details_modele.php&id=<?php print $liste[$i+1]['id_voiture']; ?>" class="work"  style="background-image: url(images/<?php $i++; print $liste[$i]['image']; ?>);">
                 <div class="desc">
                     <h3><?php
                         print utf8_decode($liste[$i]['modele']);
@@ -50,7 +50,7 @@
     ?>
             <div class="row">
                 <div class="col-md-6 text-center animate-box">
-                    <a href="#" class="work"  style="background-image: url(images/<?php print $liste[$i]['image']; ?>);">
+                    <a href="index.php?page=details_modele.php&id=<?php print $liste[$i]['id_voiture']; ?>" class="work"  style="background-image: url(images/<?php print $liste[$i]['image']; ?>);">
                         <div class="desc">
                             <h3><?php
                                 print utf8_decode($liste[$i]['modele']);

@@ -1,7 +1,7 @@
 <aside id="fh5co-hero">
     <div class="flexslider">
         <ul class="slides">
-        <li style="background-image: url(images/brand.jpg);">
+        <li style="background-image: url(images/accueil-brand.jpg);">
             <div class="overlay-gradient"></div>
             <div class="container-fluid">
                 <div class="row">
@@ -23,7 +23,7 @@
                         <div class="slider-text-inner">
                             <h1>Nouvelle Ghibli</h1>
                                 <h2>Tout sauf ordinaire</h2>
-                                <p><a class="btn btn-primary btn-demo" href="#">En savoir plus</a></p>
+                                <p><a class="btn btn-primary btn-demo" href="index.php?page=details_modele.php&id=1">En savoir plus</a></p>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         <div class="slider-text-inner text-center">
                             <h1>Nouvelle Levante</h1>
                                 <h2>The Maserati of SUVs</h2>
-                                <p><a class="btn btn-primary btn-demo" href="#">En savoir plus</a></p>
+                                <p><a class="btn btn-primary btn-demo" href="index.php?page=details_modele.php&id=2">En savoir plus</a></p>
                         </div>
                     </div>
                 </div>

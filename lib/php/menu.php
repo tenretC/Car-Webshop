@@ -18,7 +18,7 @@
                     $nbrVoitures = count($liste);
                     for($i=0;$i<$nbrVoitures;$i++){
                 ?>
-					<li><a href="index.php?page=<?php print $liste[$i]['modele'];?>.php"><?php print utf8_decode($liste[$i]['modele']);?></a></li>
+					<li><a href="index.php?page=details_modele.php&id=<?php print $liste[$i]['id_voiture']; ?>"><?php print utf8_decode($liste[$i]['modele']);?></a></li>
 					<!--<li><a href="#">Levante</a></li>
 					<li><a href="#">Quattroporte</a></li>
 					<li><a href="#">GranTurismo</a></li>

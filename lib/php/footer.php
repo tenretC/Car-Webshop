@@ -8,12 +8,12 @@
 		<ul class="fh5co-footer-links">
 			<li><a href="index.php?page=accueil.php">Accueil</a></li>
 			<li><a href="index.php?page=marque.php">La marque</a></li>
-			<li><a href="index.php?page=modeles.php">Nos modèles</a></li>
+			<li><a href="index.php?page=modeles.php">Modèles</a></li>
 			<li><a href="index.php?page=contacts.php">Contacts</a></li>
 		</ul>
 	</div>
 	<div class="col-md-3 col-md-push-3">
-		<h4>Contact</h4>
+		<h4>Contacts</h4>
 		<ul class="fh5co-footer-links">
 			<li>Levensesteenweg 860<br>1140 Evere, Belgium</li>
 			<li><a href="tel://003226696670">+32 2 669 66 70</a></li>
