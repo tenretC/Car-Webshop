@@ -19,7 +19,7 @@ session_start();
 	<link rel="stylesheet" href="admin/lib/css/flexslider.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="admin/lib/css/style.css">
-        
+
 	<!-- Modernizr JS -->
 	<script src="admin/lib/js/modernizr-2.6.2.min.js"></script>
 	<!-- jQuery -->
@@ -34,6 +34,10 @@ session_start();
 	<script src="admin/lib/js/jquery.flexslider-min.js"></script>
 	<!-- Main -->
 	<script src="admin/lib/js/main.js"></script>
+        
+    <script src="admin/lib/js/dist/jquery.validate.js"></script>
+        
+    <script src="admin/lib/js/gt_functionsVal.js"></script>
 
 	</head>
 	<body>

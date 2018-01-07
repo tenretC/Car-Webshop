@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    //alert("Hello! I am an alert box!!");
     //pour pouvoir utiliser regex
     $.validator.addMethod("regex", function (value, element, regexpr) {
         return regexpr.test(value);
@@ -7,27 +7,34 @@ $(document).ready(function () {
 
 
     //champs -> identifiants id=""
-    $("#form_commande").validate({
+    $("#reservation_form").validate({
         rules: {
-            email1: "required",
-            email2: {
-                equalTo: "#email1"
+            nom: {
+                required: true,
+                regex: /^[a-zA-Z-]{1,64}$/
             },
-            nom: "required",
-            prenom: "required",
-            password : "required",
+            prenom: {
+                required: true,
+                regex: /^[a-zA-Z-]{1,64}$/
+            },
+            email: {
+                required: true,
+                regex: /^[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9-]{2,252}\.[a-zA-Z.]{2,6}$/
+            },
             telephone: {
                 required: true,
                 regex: /^(0)[0-9]{2,3}\/[0-9]{2}\.[0-9]{2}\.[0-9]{2}$/
             },
             adresse: "required",
-            numero: "required",
-            codepostal: {
+            localite: {
+                required: true,
+                regex: /^[a-zA-Z-]{1,64}$/
+            },
+            cp: {
                 required: true,
                 min: 1000,
                 max: 9999
             },
-            localite: "required",
             submitHandler: function (form) {
                 form.submit();
             }
