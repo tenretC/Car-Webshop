@@ -21,7 +21,7 @@ class AdminDB extends Admin {
             if (!empty($data)) {
                 try {
                     $_admin[] = new Admin($data);
-                    if ($_admin[0]->LOGIN == "$login" && $_admin[0]->PASSWORD == $password) {
+                    if ($_admin[0]->login == "$login" && $_admin[0]->password == $password) {
                         return $_admin;
                     } else {
                         return null;

@@ -38,6 +38,8 @@ session_start();
     <script src="admin/lib/js/dist/jquery.validate.js"></script>
         
     <script src="admin/lib/js/gt_functionsVal.js"></script>
+        
+    <script src="admin/lib/js/gt_functionsAjax.js"></script>
 
 	</head>
 	<body>
@@ -74,7 +76,7 @@ session_start();
                         if (file_exists($_SESSION['page'])) {
                             require $_SESSION['page'];
                         } else {
-                            print "OUPS!!!!!";
+                            print "Oops, cette page n'existe pas";
                         }
                         ?>	
                     </section>

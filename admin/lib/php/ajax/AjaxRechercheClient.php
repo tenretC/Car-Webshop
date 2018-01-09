@@ -9,7 +9,7 @@ $cnx = Connexion::getInstance($dsn, $user, $pass);
 
 try {
     $recherche = new ClientDB($cnx);
-    $retour = $recherche->getClientJson($_GET['email'], $_GET['password']);
+    $retour = $recherche->getJsonClient($_GET['email']);
     print json_encode($retour);
 } catch (Exception $e) {
     print $e->getMessage();

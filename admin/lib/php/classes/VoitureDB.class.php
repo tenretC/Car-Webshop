@@ -53,4 +53,15 @@ class VoitureDB {
         }
         return $_infoArray;
     }
+    
+    public function updateVoiture($champ,$nouveau,$id){                
+        try {
+            $query="UPDATE voiture set ".$champ." = '".$nouveau."' where id_voiture ='".$id."'";            
+            $resultset = $this->_db->prepare($query);
+            $resultset->execute();            
+            
+        }catch(PDOException $e){
+            print $e->getMessage();
+        }
+    }
 }

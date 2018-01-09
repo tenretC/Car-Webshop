@@ -19,7 +19,7 @@ if (isset($_GET['reserver'])) {
         $commande = new CommandeDB($cnx);
         $commande->addCommande($_SESSION['id_voiture'], $_SESSION['id_motorisation'], $idclient, false);
         $url="index.php?page=accueil.php";
-        //header("Location: $url");
+        header("Location: $url");
 
     }
 }

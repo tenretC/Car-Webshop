@@ -28,6 +28,26 @@ class ClientDB extends Client{
         }
         return $_clientArray;
     }
+    
+    public function getJsonClient($email) {
+        $query = "select * from client where email=:email_client)";
+        try {
+            $resultset = $this->_db->prepare($query);
+            $resultset->bindValue(':email_client', $email, PDO::PARAM_STR);
+            $resultset->execute();
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
+
+        while ($data = $resultset->fetch()) {
+            try {
+                $_clientArray[] = $data;
+            } catch (PDOException $e) {
+                print $e->getMessage();
+            }
+        }
+        return $_clientArray;
+    }
 
     public function addClient(array $data) {
         $query = "insert into client (nom,prenom,email,telephone,adresse,localite,code_postal)"

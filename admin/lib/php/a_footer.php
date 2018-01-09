@@ -28,7 +28,6 @@
 		<p>
 			<small class="block">&copy; 2017 Corentin Tenret HEPH Condorcet</small> 
 			<small class="block">Designed by Corentin Tenret</small>
-            <small><a href="admin/index.php">Administration</a></small>
 		</p>
 		<p>
 			<ul class="fh5co-social-icons">
