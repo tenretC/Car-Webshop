@@ -10,7 +10,7 @@ class ClientDB extends Client{
     }
     
     public function getClient($email) {
-        $query = "select * from client where email=:email_client";
+        $query = "select * from client where email=:email_client and id_client not in (select id_client from commande)";
         try {
             $resultset = $this->_db->prepare($query);
             $resultset->bindValue(':email_client', $email, PDO::PARAM_STR);

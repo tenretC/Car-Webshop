@@ -2,8 +2,8 @@
 if(isset($_POST['id_motorisation'])){
     $_SESSION['id_motorisation']=$_POST['id_motorisation'];
 }
-print $_SESSION['id_voiture'];
-print $_SESSION['id_motorisation'];
+//print $_SESSION['id_voiture'];
+//print $_SESSION['id_motorisation'];
 
 // TRAITEMENT DU FORMULAIRE
 if (isset($_GET['reserver'])) {
@@ -11,9 +11,15 @@ if (isset($_GET['reserver'])) {
     extract($_GET, EXTR_OVERWRITE);
     if (!((empty($email) || empty($nom) || empty($prenom) || empty($telephone) || empty($adresse) || empty($cp) || empty($localite)))) {
         $client = new ClientDB($cnx);
-        $client->addClient($_GET);
+        $retour = $client->addClient($_GET);
+        $retour = $client->getClient($email);
+        //var_dump($retour[0]['id_client']);
+        $idclient = (int)$retour[0]['id_client'];
+        //var_dump($idclient);
+        $commande = new CommandeDB($cnx);
+        $commande->addCommande($_SESSION['id_voiture'], $_SESSION['id_motorisation'], $idclient, false);
         $url="index.php?page=accueil.php";
-        header("Location: $url");
+        //header("Location: $url");
 
     }
 }
