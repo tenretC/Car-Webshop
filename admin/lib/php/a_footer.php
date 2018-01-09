@@ -6,10 +6,23 @@
 	<div class="col-md-3 col-md-push-2">
 		<h4>Liens</h4>
 		<ul class="fh5co-footer-links">
-			<li><a href="index.php?page=accueil.php">Accueil</a></li>
-			<li><a href="index.php?page=marque.php">La marque</a></li>
-			<li><a href="index.php?page=modeles.php">Modèles</a></li>
-			<li><a href="index.php?page=contacts.php">Contacts</a></li>
+            <?php
+            if(!isset($_SESSION['admin'])){?>
+            <ul class="fh5co-footer-links">
+			<li><a href="../index.php?page=accueil.php">Accueil</a></li>
+			<li><a href="../index.php?page=marque.php">La marque</a></li>
+			<li><a href="../index.php?page=modeles.php">Modèles</a></li>
+			<li><a href="../index.php?page=contacts.php">Contacts</a></li>
+            <?php
+            }
+            else{?>
+            <li><a href="index.php?page=supp_modele">Supprimer modèle</a></li>
+            <li><a href="index.php?page=ajout_modele">Ajouter modèle</a></li>
+            <li><a href="/tenretMaseratiShop/admin/pages/imprimer.php">PDF Modèles</a></li>
+            <li><a href="index.php?page=disconnect" class="float-right">D&eacute;connexion</a></li>
+            <?php
+            }
+            ?> 
 		</ul>
 	</div>
 	<div class="col-md-3 col-md-push-3">

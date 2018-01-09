@@ -54,13 +54,35 @@ class VoitureDB {
         return $_infoArray;
     }
     
-    public function updateVoiture($champ,$nouveau,$id){                
+    public function addVoiture(array $data) {
+        $query = "insert into voiture (modele,prix,description,image,image2)"
+                . " values (:modele,:prix,:desc,:image,:image2)";
+
         try {
-            $query="UPDATE voiture set ".$champ." = '".$nouveau."' where id_voiture ='".$id."'";            
             $resultset = $this->_db->prepare($query);
-            $resultset->execute();            
-            
-        }catch(PDOException $e){
+            $resultset->bindValue(':modele', $data['modele'], PDO::PARAM_STR);
+            $resultset->bindValue(':prix', $data['prix'], PDO::PARAM_STR);
+            $resultset->bindValue(':desc', $data['desc'], PDO::PARAM_STR);
+            $resultset->bindValue(':image', $data['image'], PDO::PARAM_STR);
+            $resultset->bindValue(':image2', $data['image2'], PDO::PARAM_STR);
+            $resultset->execute();
+        } catch (PDOException $e) {
+            print "<br/>Echec de l'insertion";
+            print $e->getMessage();
+        }
+    }
+    
+    public function delVoiture($id) {
+        $query = "insert into voiture (modele,prix,description,image,image2)"
+                . " values (:modele,:prix,:desc,:image,:image2)";
+
+        try {
+             $query = "DELETE FROM voiture where id_voiture=:idvoiture";
+            $resultset = $this->_db->prepare($query);
+            $resultset->bindValue(':idvoiture', $id);
+            $resultset->execute();
+        } catch (PDOException $e) {
+            print "<br/>Echec de l'insertion";
             print $e->getMessage();
         }
     }

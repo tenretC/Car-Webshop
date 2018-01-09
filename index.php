@@ -39,8 +39,6 @@ session_start();
         
     <script src="admin/lib/js/gt_functionsVal.js"></script>
         
-    <script src="admin/lib/js/gt_functionsAjax.js"></script>
-
 	</head>
 	<body>
 		
